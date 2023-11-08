@@ -3,7 +3,7 @@
 
 age = int(input('Введите свой возраст: '))
 
-if age < 18:
+if 0 < age < 18:
     level_name = 'Инициации'
 elif 18 <= age <= 30:
     level_name = 'Приключений'
@@ -11,7 +11,9 @@ elif 31 <= age <= 50:
     level_name = 'Мастерства'
 elif 51 <= age <= 65:
     level_name = 'Мудрости'
-else:
+elif age > 65:
     level_name = 'Легенд'
+else:
+    print('Ошибка!')
 
 print(f'Вы находитесь на уровне "{level_name}"')

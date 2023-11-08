@@ -7,17 +7,14 @@ user_month = int(input('Введите номер месяца: '))
 # создаем кортеж с номерами месяцев, в которых 31 день
 month_31days = (1, 3, 5, 7, 8, 10, 12,)
 
-# проверяем в месяце 31 день и делится ли год на 4 без остатка
-if user_month in month_31days and user_year % 4 == 0:
+#   user_year % 400 == 0:
 
-# дополнительно проверяем делится ли год на 100 с остатком,
-# если нет, то дополнительно проверяем делится ли год на 400 с остатком
-    if user_year % 100 == 0:
-        if user_year % 400 == 0:
-            print('Да')
-        else:
-            print('Нет')
-    else:
-        print('Да')
+# 2000
+is_leap_year = (user_year % 4 == 0
+                and (user_year % 100 != 0 or user_year % 400 == 0))
+
+# проверяем в месяце 31 день и делится ли год на 4 без остатка
+if user_month in month_31days and is_leap_year:
+    print('Да')
 else:
     print('Нет')

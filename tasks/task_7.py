@@ -8,3 +8,11 @@ if bool(number) == bool(fraction) == bool(line) is True:
     print('Да')
 else:
     print('Нет')
+
+# ---------------------------
+
+if all((number, fraction, line)):
+    print('Да')
+else:
+    print('Нет')
+

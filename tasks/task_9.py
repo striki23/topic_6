@@ -10,3 +10,10 @@ if True in lst:
     print('Да')
 else:
     print('Нет')
+
+# -------------------------------
+
+if any((number, fraction, line)):
+    print('Да')
+else:
+    print('Нет')

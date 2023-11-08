@@ -19,4 +19,15 @@ else:
         else:
             max_num = num_3
 
-    print('Наибольшее число: ', max_num)
+    print('Наибольшее число:', max_num)
+
+# ----------------
+
+if num_1 == num_2 == num_3:
+    print('Все числа равны')
+elif num_1 > num_2 > num_3:
+    print('Наибольшее число:', num_1)
+elif num_2 > num_3:
+    print('Наибольшее число:', num_2)
+else:
+    print('Наибольшее число:', num_3)
